@@ -1,0 +1,17 @@
+
+> gmail-portfolio@0.0.0 build
+> ng build
+
+- Building...
+
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-3QY7IALB.js      | main          | 849.22 kB |               170.32 kB
+styles-AQGVBEKF.css   | styles        |  97.28 kB |                 8.94 kB
+polyfills-FFHMD2TL.js | polyfills     |  33.71 kB |                11.02 kB
+
+                      | Initial total | 980.21 kB |               190.28 kB
+
+Output location: C:\Users\akash\OneDrive\Desktop\Projects\gmail-portfolio\dist\gmail-portfolio
+
+Application bundle generation complete. [11.017 seconds]
+

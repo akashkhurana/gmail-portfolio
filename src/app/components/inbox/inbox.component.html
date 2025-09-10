@@ -1,0 +1,49 @@
+<div class="inbox-container">
+    <!-- Gmail-style Tabs -->
+    <mat-tab-group class="inbox-tabs" [selectedIndex]="activeTabIndex" (selectedTabChange)="onTabChange($event)"
+        animationDuration="0ms">
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">inbox</mat-icon>
+                <span class="tab-label">Primary</span>
+            </ng-template>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">local_offer</mat-icon>
+                <span class="tab-label">Promotions</span>
+            </ng-template>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">people</mat-icon>
+                <span class="tab-label">Social</span>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+
+    <!-- Email List Area -->
+    <div class="email-list">
+        <div *ngIf="loading$ | async" class="loading-state-skeleton">
+            <ngx-skeleton-loader count="4" appearance="line" animation="progress" [theme]="{
+                'height': '48px',
+                'width': '100%',
+                'display': 'block'
+              }">
+            </ngx-skeleton-loader>
+        </div>
+
+        <div *ngIf="!(loading$ | async) && (emails$ | async)?.length === 0" class="empty-state">
+            No items found in this section.
+        </div>
+
+        <!-- Iterate over emails -->
+        <ng-container *ngIf="!(loading$ | async)">
+            <app-email-row *ngFor="let email of emails$ | async" [email]="email" (click)="onEmailClick(email.id)">
+            </app-email-row>
+        </ng-container>
+    </div>
+</div>

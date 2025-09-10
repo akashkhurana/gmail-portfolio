@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h2 mat-dialog-title>New Message</h2>
+    <button mat-icon-button class="close-btn" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<mat-dialog-content>
+    <div class="form-row">
+        <mat-form-field appearance="fill" class="full-width remove-bottom-padding">
+            <input matInput placeholder="To: test@example.com (Placeholder)" disabled>
+        </mat-form-field>
+    </div>
+
+    <div class="form-row">
+        <mat-form-field appearance="fill" class="full-width">
+            <input matInput placeholder="Subject" />
+        </mat-form-field>
+    </div>
+
+    <div class="form-row">
+        <mat-form-field appearance="fill" class="full-width message-field">
+            <textarea matInput placeholder="Write your message here..." rows="8"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="recaptcha-placeholder">
+        <mat-icon>verified_user</mat-icon> Protected by reCAPTCHA
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions class="modal-actions">
+    <button mat-flat-button color="primary" class="send-btn" (click)="onSubmit()">Send</button>
+    <button mat-icon-button><mat-icon>text_format</mat-icon></button>
+    <button mat-icon-button><mat-icon>attach_file</mat-icon></button>
+    <button mat-icon-button><mat-icon>link</mat-icon></button>
+    <button mat-icon-button><mat-icon>insert_emoticon</mat-icon></button>
+    <button mat-icon-button><mat-icon>insert_drive_file</mat-icon></button>
+    <div class="spacer"></div>
+    <button mat-icon-button (click)="onClose()"><mat-icon>delete</mat-icon></button>
+</mat-dialog-actions>

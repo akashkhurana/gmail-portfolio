@@ -1,0 +1,396 @@
+
+> gmail-portfolio@0.0.0 build
+> ng build
+
+- Building...
+
+Application bundle generation failed. [8.049 seconds]
+
+X [ERROR] TS2307: Cannot find module '@angular/cdk/layout' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.component.ts:2:48:
+      2 │ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+        ╵                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] TS-992003: No suitable injection token for parameter 'breakpointObserver' of class 'AppComponent'.
+  Consider using the @Inject decorator to specify an injection token. [plugin angular-compiler]
+
+    src/app/app.component.ts:20:12:
+      20 │     private breakpointObserver: BreakpointObserver,
+         ╵             ~~~~~~~~~~~~~~~~~~
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/app/app.component.ts:20:32:
+      20 │     private breakpointObserver: BreakpointObserver,
+         ╵                                 ~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] TS2307: Cannot find module '@angular/cdk/layout' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.module.ts:27:29:
+      27 │ import { LayoutModule } from '@angular/cdk/layout';
+         ╵                              ~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] TS-991010: Value at position 21 in the NgModule.imports of AppModule is not a reference
+  Value could not be determined statically. [plugin angular-compiler]
+
+    src/app/app.module.ts:44:11:
+      44 │   imports: [
+         ╵            ^
+
+  Unknown reference.
+
+    src/app/app.module.ts:70:4:
+      70 │     LayoutModule
+         ╵     ~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:4:8:
+      4 │         <mat-icon>close</mat-icon>
+        ╵         ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-dialog-content' is not a known element:
+1. If 'mat-dialog-content' is an Angular component, then verify that it is part of this module.
+2. If 'mat-dialog-content' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:8:0:
+      8 │ <mat-dialog-content>
+        ╵ ~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-form-field' is not a known element:
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:10:8:
+      10 │         <mat-form-field appearance="fill" class="full-width remove...
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-form-field' is not a known element:
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:16:8:
+      16 │         <mat-form-field appearance="fill" class="full-width">
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-form-field' is not a known element:
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:22:8:
+      22 │         <mat-form-field appearance="fill" class="full-width messag...
+         ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:28:8:
+      28 │         <mat-icon>verified_user</mat-icon> Protected by reCAPTCHA
+         ╵         ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-dialog-actions' is not a known element:
+1. If 'mat-dialog-actions' is an Angular component, then verify that it is part of this module.
+2. If 'mat-dialog-actions' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:32:0:
+      32 │ <mat-dialog-actions class="modal-actions">
+         ╵ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:34:28:
+      34 │     <button mat-icon-button><mat-icon>text_format</mat-icon></button>
+         ╵                             ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:35:28:
+      35 │     <button mat-icon-button><mat-icon>attach_file</mat-icon></button>
+         ╵                             ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:36:28:
+      36 │     <button mat-icon-button><mat-icon>link</mat-icon></button>
+         ╵                             ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:37:28:
+      37 │     <button mat-icon-button><mat-icon>insert_emoticon</mat-icon></...
+         ╵                             ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:38:28:
+      38 │     <button mat-icon-button><mat-icon>insert_drive_file</mat-icon>...
+         ╵                             ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/contact-modal/contact-modal.component.html:40:48:
+      40 │ ...on-button (click)="onClose()"><mat-icon>delete</mat-icon></button>
+         ╵                                  ~~~~~~~~~~
+
+  Error occurs in the template of component ContactModalComponent.
+
+    src/app/components/contact-modal/contact-modal.component.ts:6:17:
+      6 │     templateUrl: './contact-modal.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/email-row/email-row.component.html:8:12:
+      8 │             <mat-icon [class.starred]="email.isStarred">
+        ╵             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component EmailRowComponent.
+
+    src/app/components/email-row/email-row.component.ts:6:17:
+      6 │     templateUrl: './email-row.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/email-row/email-row.component.html:30:71:
+      30 │ ...)="$event.stopPropagation()"><mat-icon>archive</mat-icon></button>
+         ╵                                 ~~~~~~~~~~
+
+  Error occurs in the template of component EmailRowComponent.
+
+    src/app/components/email-row/email-row.component.ts:6:17:
+      6 │     templateUrl: './email-row.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/email-row/email-row.component.html:31:71:
+      31 │ ...k)="$event.stopPropagation()"><mat-icon>delete</mat-icon></button>
+         ╵                                  ~~~~~~~~~~
+
+  Error occurs in the template of component EmailRowComponent.
+
+    src/app/components/email-row/email-row.component.ts:6:17:
+      6 │     templateUrl: './email-row.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/email-row/email-row.component.html:32:71:
+      32 │ ..."$event.stopPropagation()"><mat-icon>mark_as_unread</mat-icon><...
+         ╵                               ~~~~~~~~~~
+
+  Error occurs in the template of component EmailRowComponent.
+
+    src/app/components/email-row/email-row.component.ts:6:17:
+      6 │     templateUrl: './email-row.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/email-row/email-row.component.html:33:71:
+      33 │ ..."$event.stopPropagation()"><mat-icon>access_time</mat-icon></bu...
+         ╵                               ~~~~~~~~~~
+
+  Error occurs in the template of component EmailRowComponent.
+
+    src/app/components/email-row/email-row.component.ts:6:17:
+      6 │     templateUrl: './email-row.component.html',
+        ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-tab-group' is not a known element:
+1. If 'mat-tab-group' is an Angular component, then verify that it is part of this module.
+2. If 'mat-tab-group' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/inbox/inbox.component.html:3:4:
+      3 │     <mat-tab-group class="inbox-tabs" [selectedIndex]="activeTabInd...
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component InboxComponent.
+
+    src/app/components/inbox/inbox.component.ts:12:17:
+      12 │     templateUrl: './inbox.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8002: Can't bind to 'selectedIndex' since it isn't a known property of 'mat-tab-group'.
+1. If 'mat-tab-group' is an Angular component and it has 'selectedIndex' input, then verify that it is part of this module.
+2. If 'mat-tab-group' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. [plugin angular-compiler]
+
+    src/app/components/inbox/inbox.component.html:3:38:
+      3 │ ...ss="inbox-tabs" [selectedIndex]="activeTabIndex" (selectedTabCha...
+        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component InboxComponent.
+
+    src/app/components/inbox/inbox.component.ts:12:17:
+      12 │     templateUrl: './inbox.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-tab' is not a known element:
+1. If 'mat-tab' is an Angular component, then verify that it is part of this module.
+2. If 'mat-tab' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/inbox/inbox.component.html:6:8:
+      6 │         <mat-tab>
+        ╵         ~~~~~~~~~
+
+  Error occurs in the template of component InboxComponent.
+
+    src/app/components/inbox/inbox.component.ts:12:17:
+      12 │     templateUrl: './inbox.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-tab' is not a known element:
+1. If 'mat-tab' is an Angular component, then verify that it is part of this module.
+2. If 'mat-tab' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/inbox/inbox.component.html:13:8:
+      13 │         <mat-tab>
+         ╵         ~~~~~~~~~
+
+  Error occurs in the template of component InboxComponent.
+
+    src/app/components/inbox/inbox.component.ts:12:17:
+      12 │     templateUrl: './inbox.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] NG8001: 'mat-tab' is not a known element:
+1. If 'mat-tab' is an Angular component, then verify that it is part of this module.
+2. If 'mat-tab' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/components/inbox/inbox.component.html:20:8:
+      20 │         <mat-tab>
+         ╵         ~~~~~~~~~
+
+  Error occurs in the template of component InboxComponent.
+
+    src/app/components/inbox/inbox.component.ts:12:17:
+      12 │     templateUrl: './inbox.component.html',
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+

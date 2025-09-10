@@ -1,0 +1,85 @@
+
+> gmail-portfolio@0.0.0 build
+> ng build
+
+- Building...
+
+Application bundle generation failed. [7.232 seconds]
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/_a11y-module-chunk.mjs:2:54:
+      2 │ ...e, afterNextRender, NgZone, DOCUMENT, Injector, ElementRef, bool...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/_directionality-chunk.mjs:2:33:
+      2 │ ...t { InjectionToken, inject, DOCUMENT, signal, EventEmitter, Inje...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/_focus-monitor-chunk.mjs:2:41:
+      2 │ ...ctionToken, inject, NgZone, DOCUMENT, RendererFactory2, Injectab...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/_overlay-module-chunk.mjs:2:9:
+      2 │ import { DOCUMENT, NgZone, inject, Injector, Injectable, RendererFa...
+        ╵          ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/a11y.mjs:6:17:
+      6 │ import { inject, DOCUMENT, APP_ID, Injectable, InjectionToken, NgZo...
+        ╵                  ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/dialog.mjs:2:77:
+      2 │ ...hangeDetectorRef, Injector, DOCUMENT, afterNextRender, Component...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/portal.mjs:2:132:
+      2 │ ...iewContainerRef, Directive, DOCUMENT, EventEmitter, Input, Outpu...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/scrolling.mjs:2:124:
+      2 │ ...ble, ElementRef, Renderer2, DOCUMENT, ChangeDetectorRef, signal,...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "DOCUMENT"
+
+    node_modules/@angular/cdk/fesm2022/text-field.mjs:2:166:
+      2 │ ...rective, Output, Renderer2, DOCUMENT, booleanAttribute, Input, N...
+        ╵                                ~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "provideEnvironmentInitializer"
+
+    node_modules/@ngrx/effects/fesm2022/ngrx-effects.mjs:5:99:
+      5 │ ...ronmentProviders, provideEnvironmentInitializer } from '@angular...
+        ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] No matching export in "node_modules/@angular/core/fesm2022/core.mjs" for import "provideEnvironmentInitializer"
+
+    node_modules/@ngrx/store/fesm2022/ngrx-store.mjs:2:129:
+      2 │ ...ronmentProviders, provideEnvironmentInitializer, Optional, NgMod...
+        ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

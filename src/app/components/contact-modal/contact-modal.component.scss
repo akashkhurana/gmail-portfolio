@@ -1,0 +1,94 @@
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--md-sys-color-surface-container);
+    padding: 8px 16px;
+    border-radius: 8px 8px 0 0;
+}
+
+h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+}
+
+.close-btn mat-icon {
+    font-size: 20px;
+}
+
+mat-dialog-content {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    border-bottom: 1px solid var(--md-sys-color-outline);
+}
+
+::ng-deep .full-width {
+    width: 100%;
+}
+
+/* Material overrides for Gmail style borders */
+::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: transparent !important;
+    padding: 0 16px !important;
+}
+
+::ng-deep .mdc-line-ripple {
+    display: none !important;
+    /* Removes underline */
+}
+
+.message-field ::ng-deep .mdc-text-field__input {
+    resize: none;
+    font-family: var(--font-family-sans);
+    padding: 16px 0;
+}
+
+.recaptcha-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 16px;
+    background-color: #F8F9FA;
+    margin-top: auto;
+}
+
+.recaptcha-placeholder mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--md-sys-color-surface);
+    border-top: 1px solid var(--md-sys-color-outline);
+}
+
+.send-btn {
+    border-radius: 24px !important;
+    padding: 0 24px !important;
+    height: 36px;
+    margin-right: 16px;
+    background-color: #0b57d0 !important;
+    /* Classic Gmail send blue */
+    color: #fff !important;
+}
+
+.spacer {
+    flex: 1;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 8px 8px 0 0 !important;
+    overflow: hidden;
+}

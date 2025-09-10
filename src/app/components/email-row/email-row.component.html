@@ -1,0 +1,41 @@
+<div class="row-content" matRipple>
+    <!-- Left Actions -->
+    <div class="actions-left">
+        <div class="checkbox-wrapper" (click)="onCheckboxClick($event)">
+            <div class="fake-checkbox"></div>
+        </div>
+        <button mat-icon-button class="star-btn" (click)="toggleStar($event)" aria-label="Toggle Star">
+            <mat-icon [class.starred]="email.isStarred">
+                {{ email.isStarred ? 'star' : 'star_border' }}
+            </mat-icon>
+        </button>
+    </div>
+
+    <!-- Sender (Entity Name) -->
+    <div class="sender truncate">
+        {{ email.sender }}
+    </div>
+
+    <!-- Subject & Snippet -->
+    <div class="subject-snippet truncate">
+        <span class="subject">{{ email.subject }}</span>
+        <span class="dash"> - </span>
+        <span class="snippet">{{ email.snippet }}</span>
+        <span class="tech-chips" *ngIf="email.techStack?.length">
+            <span class="tech-chip" *ngFor="let tech of email.techStack">
+                <mat-icon class="attachment-icon">attachment</mat-icon> {{ tech }}
+            </span>
+        </span>
+    </div>
+
+    <!-- Date or Actions Right -->
+    <div class="date-actions">
+        <span class="date">{{ email.date }}</span>
+        <div class="hover-actions">
+            <button mat-icon-button (click)="$event.stopPropagation()"><mat-icon>archive</mat-icon></button>
+            <button mat-icon-button (click)="$event.stopPropagation()"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button (click)="$event.stopPropagation()"><mat-icon>mark_as_unread</mat-icon></button>
+            <button mat-icon-button (click)="$event.stopPropagation()"><mat-icon>access_time</mat-icon></button>
+        </div>
+    </div>
+</div>

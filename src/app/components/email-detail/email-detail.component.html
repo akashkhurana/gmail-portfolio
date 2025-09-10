@@ -1,0 +1,84 @@
+<div class="detail-container" *ngIf="email$ | async as email">
+    <!-- Toolbar Area -->
+    <div class="toolbar">
+        <button mat-icon-button (click)="goBack()" matTooltip="Back to Inbox">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <div class="actions">
+            <button mat-stroked-button color="primary" class="raw-data-btn" (click)="showRawData = !showRawData">
+                <mat-icon>code</mat-icon> {{ showRawData ? 'Hide Raw JSON' : 'View Raw JSON' }}
+            </button>
+            <button mat-icon-button matTooltip="Archive"><mat-icon>archive</mat-icon></button>
+            <button mat-icon-button matTooltip="Delete"><mat-icon>delete</mat-icon></button>
+            <div class="divider"></div>
+            <button mat-icon-button matTooltip="Mark unread"><mat-icon>mark_as_unread</mat-icon></button>
+        </div>
+    </div>
+
+    <div class="content-scroll">
+        <!-- Subject Line -->
+        <div class="subject-row">
+            <h2>{{ email.subject }}</h2>
+            <mat-chip-set class="label-chips">
+                <mat-chip *ngFor="let label of email.labels">{{ label }}</mat-chip>
+            </mat-chip-set>
+        </div>
+
+        <!-- Sender Header -->
+        <div class="sender-header">
+            <div class="avatar">
+                {{ email.sender.charAt(0) }}
+            </div>
+            <div class="sender-info">
+                <div class="name-row">
+                    <span class="sender-name">{{ email.sender }}</span>
+                    <span class="sender-email">&lt;{{ email.senderEmail }}&gt;</span>
+                </div>
+                <div class="recipient-row">
+                    <span>to me</span>
+                    <mat-icon class="arrow-down">arrow_drop_down</mat-icon>
+                </div>
+            </div>
+            <div class="date-actions">
+                <span>{{ email.date }}</span>
+                <button mat-icon-button><mat-icon>star_border</mat-icon></button>
+                <button mat-icon-button><mat-icon>reply</mat-icon></button>
+                <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
+            </div>
+        </div>
+
+        <!-- Email Body (Content) -->
+        <div class="email-body">
+            <ng-container *ngIf="!showRawData; else rawDataTpl">
+                <div class="rich-content" [innerHTML]="email.body"></div>
+
+                <!-- Tech Stack Extracted into material chips -->
+                <div class="tech-stack" *ngIf="email.techStack && email.techStack.length > 0">
+                    <h3>Technologies & Tools:</h3>
+                    <mat-chip-set>
+                        <mat-chip *ngFor="let tech of email.techStack" color="primary">{{ tech }}</mat-chip>
+                    </mat-chip-set>
+                </div>
+            </ng-container>
+            <ng-template #rawDataTpl>
+                <div class="raw-json-container">
+                    <pre class="raw-json-view">{{ email | json }}</pre>
+                </div>
+            </ng-template>
+        </div>
+
+        <!-- Bottom Actions Placeholder -->
+        <div class="bottom-actions">
+            <button mat-stroked-button class="reply-btn">
+                <mat-icon>reply</mat-icon> Reply
+            </button>
+            <button mat-stroked-button class="forward-btn">
+                <mat-icon>forward</mat-icon> Forward
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!(email$ | async)" class="loading-state">
+    <mat-icon class="spinner">sync</mat-icon> Loading conversation...
+</div>

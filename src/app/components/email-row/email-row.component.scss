@@ -1,0 +1,172 @@
+:host {
+    display: block;
+    border-bottom: 1px solid var(--md-sys-color-outline);
+    cursor: pointer;
+    background-color: var(--md-sys-color-surface-container);
+    transition: box-shadow 0.15s, transform 0.15s, background-color 0.15s;
+}
+
+:host.unread {
+    background-color: #FFFFFF;
+}
+
+:host.unread .sender,
+:host.unread .subject {
+    font-weight: 700;
+    color: #202124 !important;
+}
+
+:host:hover {
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    z-index: 2;
+    position: relative;
+    background-color: #FFFFFF;
+    border-color: transparent;
+}
+
+.row-content {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    /* Gmail density */
+    padding: 0 16px 0 4px;
+}
+
+.actions-left {
+    display: flex;
+    align-items: center;
+    width: 96px;
+    /* Space for checkbox and star */
+    flex-shrink: 0;
+}
+
+.checkbox-wrapper {
+    padding: 12px;
+}
+
+.fake-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f6368;
+    /* Gmail exact checkbox border */
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.fake-checkbox:hover {
+    border-color: #202124;
+    opacity: 1;
+}
+
+.star-btn mat-icon {
+    color: var(--md-sys-color-on-surface-variant);
+    opacity: 0.5;
+}
+
+.star-btn mat-icon.starred {
+    color: #F4B400;
+    /* Standard yellow star */
+    opacity: 1;
+}
+
+.sender {
+    width: 168px;
+    font-size: 14px;
+    color: var(--md-sys-color-on-surface);
+    flex-shrink: 0;
+    padding-right: 16px;
+}
+
+.subject-snippet {
+    flex: 1;
+    font-size: 14px;
+    padding-right: 16px;
+    display: flex;
+    align-items: baseline;
+}
+
+.subject {
+    color: var(--md-sys-color-on-surface);
+}
+
+.dash,
+.snippet {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date-actions {
+    width: 100px;
+    text-align: right;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+    position: relative;
+}
+
+.date {
+    display: block;
+}
+
+.hover-actions {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    background-color: #FFFFFF;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.hover-actions button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.hover-actions button mat-icon {
+    font-size: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Hover effect toggle */
+:host:hover .date {
+    display: none;
+}
+
+:host:hover .hover-actions {
+    display: flex;
+}
+
+.tech-chips {
+    display: inline-flex;
+    gap: 6px;
+    margin-left: 12px;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: #f1f3f4;
+    border: 1px solid #dadce0;
+    font-size: 11px;
+    color: #3c4043;
+    font-weight: 500;
+}
+
+.attachment-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    color: #5f6368;
+}

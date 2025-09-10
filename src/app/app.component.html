@@ -1,0 +1,116 @@
+<div class="app-layout">
+  <!-- Top Header -->
+  <mat-toolbar class="app-header">
+    <button mat-icon-button *ngIf="isMobile" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="logo-container" routerLink="/inbox/primary">
+      <img class="gmail-logo" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+        alt="Gmail" />
+    </div>
+
+    <!-- Centered Search Bar -->
+    <div class="search-container">
+      <div class="search-box">
+        <mat-icon class="search-icon">search</mat-icon>
+        <input placeholder="Search your resume, projects, skills..." class="search-input" [formControl]="searchControl"
+          [matAutocomplete]="auto" />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+        <button mat-icon-button class="filter-icon">
+          <mat-icon>tune</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- Actions & Avatar -->
+    <div class="header-actions">
+      <button mat-icon-button matTooltip="Mark all as read" (click)="markAllAsRead()">
+        <mat-icon>drafts</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Toggle Dark Mode" (click)="toggleDarkMode()">
+        <mat-icon>brightness_4</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Help">
+        <mat-icon>help_outline</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Settings">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Google apps">
+        <mat-icon>apps</mat-icon>
+      </button>
+      <button mat-icon-button class="user-avatar-btn">
+        <img src="https://i.pravatar.cc/150?img=12" alt="User Avatar" class="user-avatar" />
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <!-- Main Body Content -->
+  <mat-sidenav-container class="app-body">
+    <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile" class="app-sidenav">
+
+      <div class="compose-container">
+        <!-- Prominent Pill Button -->
+        <button mat-fab extended color="primary" class="compose-btn" (click)="openContactModal()">
+          <mat-icon>edit</mat-icon>
+          Compose
+        </button>
+      </div>
+
+      <mat-nav-list class="main-nav">
+        <!-- Navigation mimics Gmail Folders -->
+        <a mat-list-item routerLink="/inbox/primary" routerLinkActive="active-nav-item">
+          <mat-icon matListItemIcon>inbox</mat-icon>
+          <span matListItemTitle>Inbox</span>
+          <span matListItemMeta class="badge">3</span>
+        </a>
+        <a mat-list-item routerLink="/inbox/projects" routerLinkActive="active-nav-item">
+          <mat-icon matListItemIcon>star</mat-icon>
+          <span matListItemTitle>Starred</span>
+        </a>
+        <a mat-list-item routerLink="/inbox/skills" routerLinkActive="active-nav-item">
+          <mat-icon matListItemIcon>schedule</mat-icon>
+          <span matListItemTitle>Snoozed</span>
+        </a>
+        <a mat-list-item routerLink="/inbox/resume" routerLinkActive="active-nav-item">
+          <mat-icon matListItemIcon>send</mat-icon>
+          <span matListItemTitle>Sent</span>
+        </a>
+      </mat-nav-list>
+
+      <mat-divider></mat-divider>
+
+      <!-- External Links styled as Labels -->
+      <div class="nav-section-title">Labels</div>
+      <mat-nav-list class="external-nav">
+        <a mat-list-item href="https://github.com/yourusername" target="_blank" class="external-link-item">
+          <!-- Using standard code icon for GitHub fallback as Material Icons doesn't have a specific brand icon natively -->
+          <mat-icon matListItemIcon class="label-icon github-color">code</mat-icon>
+          <span matListItemTitle>GitHub</span>
+        </a>
+        <a mat-list-item href="https://linkedin.com/in/yourusername" target="_blank" class="external-link-item">
+          <mat-icon matListItemIcon class="label-icon linkedin-color">work</mat-icon>
+          <span matListItemTitle>LinkedIn</span>
+        </a>
+        <a mat-list-item href="https://yourlivesite.com" target="_blank" class="external-link-item">
+          <mat-icon matListItemIcon class="label-icon globe-color">public</mat-icon>
+          <span matListItemTitle>Live Site</span>
+        </a>
+      </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="app-content">
+      <!-- Dynamic View (List vs Detail) -->
+      <div class="content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
